@@ -65,6 +65,19 @@ billBtns.forEach(b => b.addEventListener('click', () => {
 const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: .08 }) : null;
 document.querySelectorAll('.rv').forEach(el => io ? io.observe(el) : el.classList.add('in'));
 
+// Cursor-reactive hero spotlight
+const spot = document.getElementById('spot');
+if (spot && window.matchMedia('(hover: hover)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const heroEl = document.querySelector('.hero');
+  heroEl.addEventListener('pointermove', e => {
+    const r = heroEl.getBoundingClientRect();
+    spot.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+    spot.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+  });
+} else if (spot) {
+  spot.style.display = 'none';
+}
+
 // Mobile dock appears after the hero
 const dock = document.querySelector('.dock');
 const hero = document.querySelector('.hero');

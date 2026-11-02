@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Builders Club","parentOrganization":{"@type":"Organization","name":"AI Essentials"},"email":"hello@aiessentials.in","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressCountry":"IN"}}</script>
 </head>
@@ -45,6 +45,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-media"><img class="mono" src="img/hero.jpg" alt="A builder working late at a workbench under a single lamp" fetchpriority="high"></div>
+    <div class="chrome-bar" aria-hidden="true"><span class="chrome-dots"><span></span><span></span><span></span></span><span class="chrome-mark">✺</span></div>
+    <div class="ripple" aria-hidden="true"></div>
+    <div class="spot" id="spot" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <p class="label">Not the engineers &nbsp;·&nbsp; Not the capitalists</p>
       <h1 class="display">It was always <span class="it">the builders.</span></h1>
@@ -162,7 +165,9 @@
   <!-- CLUB -->
   <section id="club" class="sec" aria-labelledby="w-h">
     <div class="wrap">
-      <div class="workshop rv">
+      <div class="workshop rv chrome">
+        <div class="chrome-bar" aria-hidden="true"><span class="chrome-dots"><span></span><span></span><span></span></span><span class="chrome-mark">✺</span></div>
+        <div class="ripple" aria-hidden="true"></div>
         <img class="mono" src="img/workshop.jpg" alt="Builders gathered around a long table with laptops in a dim loft" loading="lazy">
         <div class="workshop-inner">
           <div><span class="label" style="color:var(--t2)">The Club</span><h2 id="w-h" class="h2" style="margin-top:18px">Builders never <span class="it">built alone.</span></h2><p class="lede" style="margin-top:20px">Every great structure had a guild behind it. Ours meets every week.</p><a class="btn btn-light" href="#plan-2" style="margin-top:26px">Become a Club member — ₹5,000/mo</a></div>
